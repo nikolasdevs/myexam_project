@@ -1,13 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #b1b1b1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 32px;
+  transition: all 0.5 ease-in;
+  color: #b1b1b1;
+}
+
+button:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.heights {
+  height: calc(100vh - 88px);
+  overflow: scroll;
+}
+
+.list-link:hover {
+  animation: bounce 0.2s linear;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-field {
+  border: 1px solid #b1b1b1;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+@keyframes bounce {
+  0%,
+  05% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  10% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
